@@ -4,14 +4,14 @@ import './Map.scss';
 
 const Map = React.memo(function Map({ ymaps, setPolyline, setMap }) {
     useEffect(() => {
-        console.log(ymaps);
+        // console.log(ymaps);
         
           async  function loadMap(o) {
                 try{
                 ymaps.ready(init);
             
         } catch(e){
-            console.log(e);
+            // console.log(e);
             if(!o){
                 alert("Error loading")
             }

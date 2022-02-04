@@ -36,16 +36,16 @@ export default function Card({ id, text, moveCard, findCard, deleteCard }) {
     }
     async function fetchAdress() {
         const { card } = findCard(id);
-        console.log(card);
+        // console.log(card);
         let coords = card.placeMark.geometry.getCoordinates()
         let response = await fetch('https://geocode-maps.yandex.ru/1.x/?apikey=564bd91d-8029-4243-b5ac-6d1d436e2470&format=json&geocode=' + coords[1] + ',' + coords[0]);
         if (response.ok) {
             let json = await response.json();
-            console.log(json);
+            // console.log(json);
             return json.response.GeoObjectCollection.featureMember[0].GeoObject.metaDataProperty.GeocoderMetaData.text
 
         } else {
-            console.log(response.status);
+            // console.log(response.status);
             return 'адрес не определён'
         }
 

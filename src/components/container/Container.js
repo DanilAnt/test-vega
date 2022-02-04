@@ -33,7 +33,7 @@ export default function Container() {
     }
 
     function enterHandler() {
-        console.log('enterHandler');
+        // console.log('enterHandler');
         if (newPoint.trim().length > 0) {
             addNewCard();
             setNewPoint('')
@@ -74,7 +74,7 @@ export default function Container() {
 
             
             let coords = cards.map((card) => { return card.placeMark.geometry.getCoordinates() })
-            console.log(cards);
+            // console.log(cards);
 
             // polyline.geometry.set(coords);
 
@@ -82,7 +82,7 @@ export default function Container() {
             if (polyline) {
                 coords.forEach((c, index) => {
 
-                    console.log(c,'c');
+                    // console.log(c,'c');
                     polyline.geometry.set(index, c);
                 })
                 polyline.geometry.set(coords.length, []);

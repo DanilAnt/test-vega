@@ -28,9 +28,9 @@ const List =  React.memo( function List({cards, setCards, remoweMarker}) {
     }, [findCard, cards, setCards]);
 
     function handleDeleteCard(id){
-        console.log(id,'id');
+        // console.log(id,'id');
         const { card,index } = findCard(id);
-        console.log(index);
+        // console.log(index);
         setCards(update(cards, {
             $splice: [
                 [index, 1]
