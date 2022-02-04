@@ -1,0 +1,23 @@
+.card{
+    border: 1px dashed gray;
+    padding: 0.5rem 1rem;
+    marginBottom: 0.5rem;
+    backgroundColor: white;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .card__buttons{
+        display: flex;
+        align-items: center;
+    }
+    .card__button{
+        margin-right: 5px;
+
+    }
+    .card__adressIcon{
+        width: 25px;
+        height: 25px;
+        fill:red;
+    }
+}
