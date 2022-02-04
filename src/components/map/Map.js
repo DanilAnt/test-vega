@@ -33,7 +33,7 @@ const Map = React.memo(function Map({ ymaps, setPolyline, setMap }) {
             center: [55.76, 37.64],
             zoom: 7
         });
-        console.log('setMap',);
+        // console.log('setMap',);
         polyline =new ymaps.Polyline([
            
         ])

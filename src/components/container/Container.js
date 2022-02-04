@@ -38,7 +38,7 @@ export default function Container() {
             addNewCard();
             setNewPoint('')
         }
-        console.log(cards);
+        // console.log(cards);
     }
 
     function addNewCard() {
@@ -70,25 +70,17 @@ export default function Container() {
     }
     function makePolyline() {
         if (myMap) {
-            myMap.geoObjects.each((e) => { console.log(e) });
-
-            
+            // myMap.geoObjects.each((e) => { console.log(e) });
             let coords = cards.map((card) => { return card.placeMark.geometry.getCoordinates() })
             // console.log(cards);
-
-            // polyline.geometry.set(coords);
-
             // console.log(polyline, 10);
             if (polyline) {
                 coords.forEach((c, index) => {
-
                     // console.log(c,'c');
                     polyline.geometry.set(index, c);
                 })
                 polyline.geometry.set(coords.length, []);
             }
-
-
         }
     }
     return (
